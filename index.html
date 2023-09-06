@@ -36,7 +36,13 @@
       <div class="container py-2">
         <h1>List Mails</h1>
         <ul class="list-group">
-          <li class="list-group-item" v-for="mail in listMails">{{mail}}</li>
+          <li
+            class="list-group-item"
+            v-show="listMails.length == numberMails"
+            v-for="mail in listMails"
+          >
+            {{mail}}
+          </li>
         </ul>
       </div>
     </div>

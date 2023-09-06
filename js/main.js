@@ -3,14 +3,15 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      message: "Hello World",
+      numberMails: 10,
       listMails: [],
+      doneList: false,
     };
   },
 
   methods: {
     generateMail() {
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < this.numberMails; i++) {
         axios
           .get("https://flynn.boolean.careers/exercises/api/random/mail")
           .then((response) => {
@@ -19,8 +20,6 @@ createApp({
             this.listMails.push(result);
           });
       }
-
-      console.table(this.listMails);
     },
   },
 
