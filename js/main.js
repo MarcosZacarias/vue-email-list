@@ -5,7 +5,6 @@ createApp({
     return {
       numberMails: 10,
       listMails: [],
-      doneList: false,
     };
   },
 
